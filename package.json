@@ -1,0 +1,45 @@
+{
+  "name": "econo-shield-dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@9.4.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:seed": "tsx scripts/seed-datasets.ts",
+    "db:setup": "npm run db:generate && npm run db:migrate && npm run db:seed",
+    "test:model": "tsx scripts/validate-model.ts"
+  },
+  "dependencies": {
+    "@better-auth/drizzle-adapter": "^1.6.18",
+    "@libsql/client": "^0.17.3",
+    "@types/node": "20.14.10",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "better-auth": "^1.6.18",
+    "clsx": "2.1.1",
+    "csv-parse": "^7.0.0",
+    "drizzle-orm": "^0.45.2",
+    "lucide-react": "0.468.0",
+    "next": "14.2.35",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "tailwind-merge": "2.3.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "10.4.19",
+    "dotenv": "^17.4.2",
+    "drizzle-kit": "^0.31.10",
+    "eslint": "8.57.0",
+    "eslint-config-next": "14.2.4",
+    "postcss": "8.4.39",
+    "tailwindcss": "3.4.4",
+    "tsx": "^4.22.4",
+    "typescript": "5.5.2"
+  }
+}
